@@ -1,0 +1,13 @@
+bot:
+  token: "1259858094:AAG38xWzr7ghdrsok4-CGnxs41jl8vGyXOE"
+  name: "CurrencyRateParserBot"
+proxy:
+  host: "127.0.0.1"
+  port: 9150
+feign:
+  client:
+    config:
+      jplaceholder:
+        connectionTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
