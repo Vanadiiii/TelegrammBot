@@ -1,0 +1,12 @@
+logging:
+  file:
+    name: "logs/ValuteRateBot.log"
+    max-history: 15
+    clean-history-on-start: false
+    max-size: 10MB
+  level:
+    spring: warn
+    org.hibernate: warn
+    apache: warn
+    com.netflix: warn
+    com.zaxxer: warn

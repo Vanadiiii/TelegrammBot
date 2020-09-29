@@ -6,17 +6,17 @@ proxy:
   port: 9150
   type: SOCKS4
 
-spring:
-  profiles:
-    active: dev
-  main:
-    banner-mode: console
-
 logging:
+  pattern:
+    console: "%clr(%d{HH:mm:ss.SSS}){yellow} %clr([%thread]){blue} %-5level %clr(%logger{36}){magenta} - %msg%n"
+    file: "%d{HH:mm:ss.SSS} %-4relative [%thread] %-5level %logger{35} - %msg%n"
   level:
-    org.springframework: error
-    org.hibernate: error
-    org.apache: error
-    com.netflix: error
-    com.zaxxer: error
     ru.dexsys.TelegramBot: info
+  group:
+    spring: org.springframework
+    apache: org.apache.catalina, org.apache.tomcat, org.apache.coyote
+
+spring:
+  output:
+    ansi:
+      enabled: detect

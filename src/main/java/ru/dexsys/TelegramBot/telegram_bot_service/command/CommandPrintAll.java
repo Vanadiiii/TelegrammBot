@@ -22,8 +22,6 @@ public class CommandPrintAll extends AbstractCommand {
 
     @Override
     public void execute(AbsSender absSender, User user, Chat chat, String[] arguments) {
-        log.info("User " + user.getId() + " use command " + getCommandIdentifier());
-
         if (LocalDate.now().isAfter(coreService.getLocalDate())) {
             coreService.enrichRates();
         }

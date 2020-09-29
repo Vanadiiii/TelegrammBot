@@ -50,9 +50,12 @@ public class CommandPrint extends AbstractCommand {
                     .append(firstValute.getValue() / secondValute.getValue())
                     .append(" ")
                     .append(firstValute.getName());
-        } else {
+        } else if (arguments.length > 2) {
             log.error("too many arguments for method '/print'");
-            throw new RuntimeException("too many arguments for method '/print'");
+            stringBuilder.append("too many arguments for method '/print'");
+        } else {
+            log.error("no arguments for method '/print'");
+            stringBuilder.append("no arguments for method '/print'");
         }
 
         message.setText(stringBuilder.toString());

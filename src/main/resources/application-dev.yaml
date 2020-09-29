@@ -1,0 +1,7 @@
+logging:
+  level:
+    spring: warn
+    org.hibernate: warn
+    apache: warn
+    com.netflix: warn
+    com.zaxxer: warn
